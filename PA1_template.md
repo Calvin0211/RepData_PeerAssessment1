@@ -2,8 +2,10 @@
 title: "Project week 2"
 author: "You"
 date: "15/06/2020"
-output: html_document
-keep_md: yes
+output: 
+  html_document: 
+    keep_md: yes
+
 ---
 
 
@@ -32,7 +34,7 @@ s2<-as.numeric(s1)
 hist(s2,xlab = "total number of Steps",main="Histogram of the total number of steps taken each day")
 ```
 
-![plot of chunk unnamed-chunk-2](figs/fig-unnamed-chunk-2-1.png)
+![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 ```r
 mean1<-mean(s2)
@@ -40,7 +42,7 @@ median1<-median(s2)
 ```
 
 The mean and median of the total number of steps taken each day is 9354.2295082 and
-1.0395 &times; 10<sup>4</sup> respectively.
+1.0395\times 10^{4} respectively.
 
 ## What is the average daily activity pattern?
 
@@ -52,7 +54,7 @@ s7<-as.numeric(s6)
 plot(t5,s7,type = "l",xlab="Interval",ylab = "Number of Steps")
 ```
 
-![plot of chunk unnamed-chunk-3](figs/fig-unnamed-chunk-3-1.png)
+![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 ```r
 s8<-cbind(t5,s7)
@@ -103,14 +105,14 @@ a2<-as.numeric(a1)
 hist(a2,xlab = "total number of Steps",main="Histogram of the total number of steps taken each day")
 ```
 
-![plot of chunk unnamed-chunk-4](figs/fig-unnamed-chunk-4-1.png)
+![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 ```r
 mean2<-mean(a2)
 median2<-median(a2)
 ```
 The mean for that 5-minute interval, used for filling the missing values in the dataset.The mean and median of the total number of steps taken each day is 
-1.0766189 &times; 10<sup>4</sup> and 1.0766189 &times; 10<sup>4</sup> respectively. 
+1.0766189\times 10^{4} and 1.0766189\times 10^{4} respectively. 
 There is an increase in the number of days with number of steps between 10000
 and 15000 and a decrease in the number of days with number of steps between 0
 and 5000.
@@ -145,7 +147,7 @@ plot(t5,r10,type = "l",xlab = "Interval",ylab = "Number of Steps",main="weekend"
 plot(t5,r7,type = "l",xlab = "Interval",ylab = "Number of Steps",main="weekday")
 ```
 
-![plot of chunk unnamed-chunk-5](figs/fig-unnamed-chunk-5-1.png)
+![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 There is no difference between the activity pattern during the weekday and 
 during the weekend.
