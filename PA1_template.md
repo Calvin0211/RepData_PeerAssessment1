@@ -34,7 +34,7 @@ s2<-as.numeric(s1)
 hist(s2,xlab = "total number of Steps",main="Histogram of the total number of steps taken each day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+![](PA1_template_files/figure-html/hist1-1.png)<!-- -->
 
 ```r
 mean1<-mean(s2)
@@ -54,7 +54,7 @@ s7<-as.numeric(s6)
 plot(t5,s7,type = "l",xlab="Interval",ylab = "Number of Steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](PA1_template_files/figure-html/timeseriesplot-1.png)<!-- -->
 
 ```r
 s8<-cbind(t5,s7)
@@ -102,10 +102,14 @@ p7<-p7[order(p7$date),]
 a<-split(p7,p7$date)
 a1<-lapply(a,function(x) { sum(x[,1],na.rm = TRUE) })
 a2<-as.numeric(a1)
+```
+
+
+```r
 hist(a2,xlab = "total number of Steps",main="Histogram of the total number of steps taken each day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](PA1_template_files/figure-html/hist2-1.png)<!-- -->
 
 ```r
 mean2<-mean(a2)
@@ -147,7 +151,7 @@ plot(t5,r10,type = "l",xlab = "Interval",ylab = "Number of Steps",main="weekend"
 plot(t5,r7,type = "l",xlab = "Interval",ylab = "Number of Steps",main="weekday")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](PA1_template_files/figure-html/plotweekdayandweekends-1.png)<!-- -->
 
 There is no difference between the activity pattern during the weekday and 
 during the weekend.

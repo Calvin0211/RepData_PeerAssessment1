@@ -29,7 +29,7 @@ t5<-unique(data$interval)
 ## What is mean total number of steps taken per day?
 
 
-```{r}
+```{r hist1}
 s<-split(data,data$date)
 s1<-lapply(s,function(x) { sum(x[,1],na.rm = TRUE) })
 s2<-as.numeric(s1)
@@ -43,7 +43,7 @@ The mean and median of the total number of steps taken each day is `r mean1` and
 
 ## What is the average daily activity pattern?
 
-```{r}
+```{r timeseriesplot}
 s5<-split(data,data$interval)
 s6<-lapply(s5,function(x) { mean(x[,1],na.rm = TRUE) })
 s7<-as.numeric(s6)
@@ -77,6 +77,9 @@ p7<-p7[order(p7$date),]
 a<-split(p7,p7$date)
 a1<-lapply(a,function(x) { sum(x[,1],na.rm = TRUE) })
 a2<-as.numeric(a1)
+```
+
+```{r hist2}
 hist(a2,xlab = "total number of Steps",main="Histogram of the total number of steps taken each day")
 mean2<-mean(a2)
 median2<-median(a2)
@@ -89,7 +92,7 @@ and 5000.
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
-```{r}
+```{r plotweekdayandweekends}
 p7$day<-weekdays(p7$date)
 r1<-split(p7,p7$day)
 r1$Monday$day<-"weekday"
