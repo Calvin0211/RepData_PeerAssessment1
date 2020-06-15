@@ -3,6 +3,7 @@ title: "Project week 2"
 author: "You"
 date: "15/06/2020"
 output: html_document
+keep_md: yes
 ---
 
 
@@ -31,7 +32,7 @@ s2<-as.numeric(s1)
 hist(s2,xlab = "total number of Steps",main="Histogram of the total number of steps taken each day")
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
+![plot of chunk unnamed-chunk-2](figs/fig-unnamed-chunk-2-1.png)
 
 ```r
 mean1<-mean(s2)
@@ -51,7 +52,7 @@ s7<-as.numeric(s6)
 plot(t5,s7,type = "l",xlab="Interval",ylab = "Number of Steps")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
+![plot of chunk unnamed-chunk-3](figs/fig-unnamed-chunk-3-1.png)
 
 ```r
 s8<-cbind(t5,s7)
@@ -102,7 +103,7 @@ a2<-as.numeric(a1)
 hist(a2,xlab = "total number of Steps",main="Histogram of the total number of steps taken each day")
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
+![plot of chunk unnamed-chunk-4](figs/fig-unnamed-chunk-4-1.png)
 
 ```r
 mean2<-mean(a2)
@@ -144,7 +145,7 @@ plot(t5,r10,type = "l",xlab = "Interval",ylab = "Number of Steps",main="weekend"
 plot(t5,r7,type = "l",xlab = "Interval",ylab = "Number of Steps",main="weekday")
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
+![plot of chunk unnamed-chunk-5](figs/fig-unnamed-chunk-5-1.png)
 
 There is no difference between the activity pattern during the weekday and 
 during the weekend.
